@@ -1,7 +1,7 @@
 echo Make Directories for Git Repositories
 mkdir ~/Documents/git
 
-echo UPDATE APT REPOSITORIES
+echo ADD APT REPOSITORIES
 sudo apt-get update
 sudo add-apt-repository main
 sudo add-apt-repository universe
@@ -39,3 +39,9 @@ sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'sudo apt-get update
 sudo apt-get install -y code 
 echo # or code-insiders
+
+echo FileZilla ## Do Note that if the other APT Repositories have been added, only the last line here is needed.
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo apt update
+sudo apt install filezilla
