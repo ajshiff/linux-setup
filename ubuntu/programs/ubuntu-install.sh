@@ -8,4 +8,5 @@ bash ./install/apt-install-nodejs.sh
 bash ./install/apt-install-vim.sh
 bash ./install/apt-install-opengl.sh
 bash ./install/apt-install-vscode.sh
+bash ./install/set-git-signature.sh
 echo 'Install Completed!'
