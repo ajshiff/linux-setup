@@ -33,4 +33,12 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo apt-get update
 sudo apt-get install -y code
 sudo apt-get install -y code-insiders
+echo 'Installing FileZilla...'
+sudo apt-get install -y filezilla
+echo 'Enter git Username:'
+read gitUsername
+git config --global user.name "$gitUsername"
+echo 'Enter git Email:'
+read gitEmail
+git config --global user.email "$gitEmail"\
 echo 'Install Completed!'
