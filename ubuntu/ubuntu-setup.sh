@@ -1,3 +1,3 @@
 echo 'Setting Up Your Ubuntu Environment...'
-bash ./preferences/ubuntu-preferences.sh
-bash ./programs/ubuntu-install.sh
+cd ./preferences; bash ./ubuntu-preferences.sh; cd ..;
+cd ./programs; bash ./ubuntu-install.sh; cd ..;
