@@ -1,4 +1,4 @@
-UPDATE REPOSITORIES
+echo UPDATE REPOSITORIES
 sudo apt-get update
 sudo add-apt-repository main
 sudo add-apt-repository universe
@@ -6,33 +6,33 @@ sudo add-apt-repository restricted
 sudo add-apt-repository multiverse
 sudo apt-get update
 
-CURL
+echo CURL
 sudo apt-get install -y curl
 
-Git
+echo Git
 sudo apt-get install -y git
 git config --global user.name ""
 git config --global user.email ""
 
-Build-Essentials
+echo Build-Essentials
 sudo apt-get install -y build-essential
 
-NodeJS
+echo NodeJS
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-NPM
+echo NPM
 sudo npm install npm --global
 
-vsCode
+echo Vim
+sudo apt-get install -y vim
+
+echo OpenGl
+sudo apt-get install -y freeglut3-dev
+
+echo VSCode
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'sudo apt-get update
-sudo apt-get install code # or code-insiders
-
-OpenGl
-sudo apt-get install -y freeglut3-dev
-
-Vim
-sudo apt-get install -y vim
-
+sudo apt-get install -y code 
+echo # or code-insiders
