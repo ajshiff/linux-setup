@@ -1,4 +1,7 @@
-echo UPDATE REPOSITORIES
+echo Make Directories for Git Repositories
+mkdir ~/Documents/git
+
+echo UPDATE APT REPOSITORIES
 sudo apt-get update
 sudo add-apt-repository main
 sudo add-apt-repository universe
