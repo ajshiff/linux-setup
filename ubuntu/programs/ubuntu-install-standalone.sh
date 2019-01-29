@@ -33,6 +33,12 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo apt-get update
 sudo apt-get install -y code
 sudo apt-get install -y code-insiders
+echo 'Installing dotnet-sdk-2.2'
+wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install dotnet-sdk-2.2
 echo 'Installing FileZilla...'
 sudo apt-get install -y filezilla
 echo 'Enter git Username:'
